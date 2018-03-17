@@ -1,0 +1,12 @@
+@keyframes play {
+    from { background-position:  -1500px; }
+    to { background-position: -0px; }
+}
+
+#cloud {
+    width: 300px;
+    height: 300px;
+    margin: 1em auto;
+    background-image: url("./images/cloud-evaporate-sprite-horizontal-vlg.png");
+    animation: play .5s steps(5);
+}
