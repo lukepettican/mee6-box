@@ -8,17 +8,35 @@ var quotes = [
     `Love is just a cheical reaction...`,
     `Weddings are basically funerals with cake.`,
     `What about the reality where Hitler cured cancer, Morty? The answer is: Don't think about it.`,
-    `It's like the N word and the C word had a baby and it was raised by all the bad words for Jews`,
-    `I turned myself into a pickle. I'm Pickle Riiiiick`,
-    `I mean, why would a Pop-Tart want to live inside a toaster, Rick? `,
-    `I’ll tell you how I feel about school, Jerry; It’s a waste of time.`,
+    `It's like the N word and the C word had a baby and it was raised by all the bad words for Jews.`,
+    `I turned myself into a pickle. I'm Pickle Riiiiick!`,
+    `I mean, why would a Pop-Tart want to live inside a toaster? `,
+    `I’ll tell you how I feel about school - it’s a waste of time.`,
     `Having a family doesn’t mean that you stop being an individual.`,
     `... little biiitsss ...`
 ]
+
+function showQuote() {
+    var quote = quotes[Math.floor(Math.random() * quotes.length)];
+    var cloud = document.getElementById('cloud');
+    var button = document.getElementsByClassName('button')[0];
+    cloud.setAttribute("style", "display : none");
+    button.setAttribute("style", "display : none");
+    var quoteElement = document.createElement('p');
+    var node = document.createTextNode(quote);
+    quoteElement.appendChild(node);
+    quoteElement.classList.add('quote');
+    var boxWrapper = document.getElementsByClassName('meeseeks-box-wrapper')[0];
+    boxWrapper.classList.add('quoted');
+    boxWrapper.appendChild(quoteElement);
+}
 
 function poof(element) {
     // Removes an element from the document
     element.parentNode.removeChild(element);
     var cloud = document.getElementById('cloud');
     cloud.setAttribute("style", "display : block");
+    setTimeout(() => {
+        showQuote();
+    }, 500);
 }
