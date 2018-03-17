@@ -6,6 +6,7 @@
     <title>The Meeseeks box</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="animation.css" />    
     <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 </head>
@@ -31,9 +32,9 @@
         </div>
         <div>
             <div class="meeseeks-box-wrapper">
-                <div class="button">    
-                </div>
-                <img src="images/meeseeksBox.jpg" alt="meeseeks box">
+                <div class="button" onclick="poof(meeseeksbox)"></div>
+                <img id="meeseeksbox" src="images/meeseeksBox.jpg" alt="meeseeks box">
+                <div id="cloud" style="display: none;"></div>
             </div>
         </div>
     </div>
