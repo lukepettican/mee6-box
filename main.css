@@ -1,0 +1,36 @@
+body, html {
+    font-size: 18px;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 3.5em;
+}
+
+.logo {
+    margin: 20px;
+}
+
+.heading, .cta {
+    text-align: center;
+}
+
+.arrow-wrapper, .meeseeks-box-wrapper {
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.arrow-wrapper { 
+    width: 50px;
+}
+
+.meeseeks-box-wrapper {
+    width: 300px;
+}
+
+.arrow-wrapper img, .meeseeks-box-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+}
